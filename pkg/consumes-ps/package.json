@@ -1,0 +1,18 @@
+{
+  "name": "consumes-ps",
+  "version": "1.0.0",
+  "description": "A dummy package that uses pad-surround",
+  "main": "index.js",
+  "scripts": {
+    "test": "node index.test.js"
+  },
+  "keywords": [],
+  "dependencies": {
+    "pad-surround": "link:../pad-surround"
+  },
+  "devDependencies": {
+    "left-pad": "^1.3.0"
+  },
+  "author": "Sean Barag <barag@cockroachlabs.com>",
+  "license": "MIT"
+}
