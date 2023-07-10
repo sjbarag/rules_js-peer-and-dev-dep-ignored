@@ -1,0 +1,14 @@
+{
+  "name": "pad-surround",
+  "version": "1.0.0",
+  "description": "Like left-pad, but also pads the right-hand-side.",
+  "main": "index.js",
+  "author": "Sean Barag <barag@cockroachlabs.com>",
+  "license": "MIT",
+  "scripts": {
+    "test": "node ./index.test.js"
+  },
+  "dependencies": {
+    "left-pad": "^1.3.0"
+  }
+}

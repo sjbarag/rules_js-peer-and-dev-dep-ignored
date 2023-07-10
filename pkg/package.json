@@ -1,0 +1,7 @@
+{
+  "name": "demo-pnpm-workspace",
+  "version": "1.0.0",
+  "keywords": [],
+  "author": "Sean Barag <barag@cockroachlabs.com>",
+  "license": "MIT"
+}
