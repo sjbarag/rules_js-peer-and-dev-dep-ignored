@@ -3,5 +3,8 @@
   "version": "1.0.0",
   "keywords": [],
   "author": "Sean Barag <barag@cockroachlabs.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "scripts": {
+    "test": "pnpm recursive test"
+  }
 }
