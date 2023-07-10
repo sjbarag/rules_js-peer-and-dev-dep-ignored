@@ -1,0 +1,29 @@
+load("@npm//:defs.bzl", "npm_link_all_packages")
+npm_link_all_packages(name = "node_modules")
+
+exports_files(["package.json"])
+
+load("@aspect_rules_js//js:defs.bzl", "js_library", "js_test")
+load("@aspect_rules_js//npm:defs.bzl", "npm_package")
+
+js_library(
+    name = "pad-surround__lib",
+    srcs = [
+        "package.json",
+        "index.js",
+    ],
+)
+
+npm_package(
+    name = "pad-surround",
+    srcs = [
+        ":pad-surround__lib"
+    ],
+    visibility = ["//visibility:public"]
+)
+
+js_test(
+    name = "test",
+    data = [":pad-surround__lib", ":node_modules"],
+    entry_point = "index.test.js",
+)

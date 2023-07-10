@@ -1,7 +1,7 @@
 const { greet } = require("./");
-const assert = require("assert");
 
-assert.strictEqual(
-  greet("myspace-fan"),
-  "Well hello there, xxmyspace-fanxx!"
-);
+describe("greet", () => {
+  it("works", () => {
+    expect(greet("myspace-fan")).toEqual("Well hello there, xxmyspace-fanxx!");
+  })
+});

@@ -11,4 +11,4 @@ module.exports.padSurround = function padSurround(str, len, ch) {
   );
 
   return leftPad(withRightPad, len, ch);
-}
+};

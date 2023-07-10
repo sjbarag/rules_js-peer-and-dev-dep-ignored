@@ -1,0 +1,25 @@
+load("@npm//:defs.bzl", "npm_link_all_packages")
+npm_link_all_packages(name = "node_modules")
+
+exports_files(["package.json"])
+
+load("@aspect_rules_js//js:defs.bzl", "js_library")
+load("@aspect_rules_jest//jest:defs.bzl", "jest_test")
+
+js_library(
+    name = "consumes-ps",
+    srcs = [
+        "package.json",
+        "index.js",
+    ]
+)
+
+jest_test(
+    name = "test",
+    node_modules = ":node_modules",
+    chdir = package_name(),
+    args = [
+        "--ci",
+    ],
+    data = ["index.js", "index.test.js", ":node_modules"],
+)
