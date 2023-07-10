@@ -6,3 +6,11 @@ exports_files([
     "pnpm-lock.yaml",
     ".npmrc",
 ])
+
+test_suite(
+    name = "test",
+    tests = [
+        "//pkg/pad-surround:test",
+        "//pkg/consumes-ps:test",
+    ],
+)

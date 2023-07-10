@@ -7,9 +7,11 @@
     "test": "node index.test.js"
   },
   "keywords": [],
-  "devDependencies": {
-    "pad-surround": "link:../pad-surround",
+  "dependencies": {
     "left-pad": "^1.3.0"
+  },
+  "devDependencies": {
+    "pad-surround": "link:../pad-surround"
   },
   "author": "Sean Barag <barag@cockroachlabs.com>",
   "license": "MIT"
